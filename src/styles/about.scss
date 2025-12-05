@@ -1,4 +1,7 @@
 .about {
+  background-color: #fcfaef;
+  margin-bottom: 120px;
+
   &__photos {
     display: block;
     justify-content: center;
@@ -18,47 +21,36 @@
     }
   }
 
-  .container {
-    padding-top: 48px;
-    padding-bottom: 64px;
+  &__content {
+    @include page-grid;
+    padding-block: 120px;
+    row-gap: 24px;
+  }
 
+  &__content__title {
+    margin: 0;
+
+    // На мобилке заголовок на всю ширину
     @include on-tablet {
-      padding-top: 120px;
-      padding-bottom: 120px;
+      grid-column: 1 / span 6; // слева, примерно как на макете
+    }
+
+    @include on-desktop {
+      grid-column: 1 / span 6;
     }
   }
 
-  &__content {
-    @include page-grid;
+  &__content__description {
+    margin: 0;
 
-    &__title {
-      grid-column: 1 / -1;
-
-      @include on-tablet {
-        grid-column: span 3;
-      }
-
-      @include on-desktop {
-        grid-column: span 6;
-      }
+    @include on-tablet {
+      grid-column: 7 / span 6; // текст справа
+      max-width: 460px; // ограничиваем ширину, чтобы переносы были похожи
     }
 
-    &__description {
-      grid-column: 1 / -1;
-
-      margin: 0;
-
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 140%;
-
-      @include on-tablet {
-        grid-column: span 3;
-      }
-
-      @include on-desktop {
-        grid-column: 8 / 12;
-      }
+    @include on-desktop {
+      grid-column: 7 / span 5;
+      max-width: 460px;
     }
   }
 }

@@ -1,5 +1,7 @@
 .wrapper-button {
   @include page-grid;
+  margin-top: 32px;
+
   &__button {
     display: grid;
     align-items: center;
