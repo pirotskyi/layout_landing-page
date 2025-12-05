@@ -21,6 +21,7 @@
 
   &__phone {
     @include hover(color, (#f98921));
+    padding-inline: 20px;
   }
 
   &__phone_number {
@@ -52,5 +53,7 @@
 
   &__nav {
     margin-bottom: 48px;
+    padding-inline: 20px;
+
   }
 }

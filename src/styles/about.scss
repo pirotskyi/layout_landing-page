@@ -23,6 +23,7 @@
 
   &__content {
     @include page-grid;
+
     padding-block: 120px;
     row-gap: 24px;
   }
@@ -30,9 +31,8 @@
   &__content__title {
     margin: 0;
 
-    // На мобилке заголовок на всю ширину
     @include on-tablet {
-      grid-column: 1 / span 6; // слева, примерно как на макете
+      grid-column: 1 / span 6;
     }
 
     @include on-desktop {
@@ -44,8 +44,8 @@
     margin: 0;
 
     @include on-tablet {
-      grid-column: 7 / span 6; // текст справа
-      max-width: 460px; // ограничиваем ширину, чтобы переносы были похожи
+      grid-column: 7 / span 6;
+      max-width: 460px;
     }
 
     @include on-desktop {
