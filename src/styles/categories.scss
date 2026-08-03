@@ -18,7 +18,7 @@
   }
 
   &__link {
-    @include hover(transform, scale(0.9));
+    @include hover(transform, scale(0.96));
 
     @include on-tablet {
       grid-column: span 3;
