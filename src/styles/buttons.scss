@@ -1,6 +1,6 @@
 .wrapper-button {
   @include page-grid;
-  
+
   margin-top: 32px;
 
   &__button {
@@ -20,10 +20,25 @@
     text-align: center;
 
     background-color: #f98921;
+    transition:
+      transform 0.3s,
+      background-color 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #1b2129;
+      transform: scale(0.96);
+
+    }
+
+    &:active {
+      cursor: pointer;
+      background-color: #010810;
+      transform: scale(1);
+    }
 
     &--view {
       grid-column: 1 / -1;
-
       @include on-desktop {
         grid-column: span 4;
       }
@@ -32,19 +47,5 @@
     &--send {
       grid-column: 1 / -1;
     }
-  }
-
-  &__button:hover {
-    cursor: pointer;
-    background-color: #1b2129;
-
-    @include hover(transform, scale(0.9));
-  }
-
-  &__button:active {
-    cursor: pointer;
-    background-color: #010810;
-
-    @include hover(transform, scale(1.0));
   }
 }
